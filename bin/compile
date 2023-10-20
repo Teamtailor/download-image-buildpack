@@ -1,2 +1,15 @@
 #!/usr/bin/env bash
-echo "-----> Nothing to compile"
+
+# fail fast
+set -ueo pipefail
+
+# debug
+# set -x
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+echo "---------Build:"
+ls -lha $BUILD_DIR
+echo "--------- cache:"
+ls lha $CACHE_DIR
+echo "---------"
