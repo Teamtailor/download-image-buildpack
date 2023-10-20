@@ -10,12 +10,7 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 
-if [ -f $ENV_DIR/DOCKER_REGISTRY ]; then
-  DOCKER_REGISTRY=$(cat $ENV_DIR/DOCKER_REGISTRY)
-else
-  DOCKER_REGISTRY=stable
-fi
-
+DOCKER_REGISTRY=$(cat $ENV_DIR/DOCKER_REGISTRY)
 
 echo "---------BUILD_DIR:"
 ls -lha $BUILD_DIR
@@ -25,4 +20,9 @@ echo "--------- ENV_DIR:"
 ls -lha $ENV_DIR
 echo "--------- DOCKER_REGISTRY:"
 echo $DOCKER_REGISTRY
+echo "--------- SOURCE_VERSION:"
+echo $SOURCE_VERSION
+echo "---------"
+echo "all env variables:"
+env
 echo "---------"
