@@ -19,7 +19,7 @@ echo "--------- ENV_DIR:"
 ls -lha $ENV_DIR
 echo "---------"
 
-docker_image_url_prefix=$(cat $ENV_DIR/DOCKER_IMAGE_URL_PREFIX)
+docker_image_url_prefix=$(cat $ENV_DIR/DOCKER_REGISTRY)
 docker_image=$docker_image_url_prefix:$SOURCE_VERSION
 
 
