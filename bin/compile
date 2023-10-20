@@ -10,8 +10,6 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 
-DOCKER_IMAGE_URL_PREFIX=$(cat $ENV_DIR/DOCKER_IMAGE_URL_PREFIX)
-docker_image=$DOCKER_IMAGE_URL_PREFIX:$SOURCE_VERSION
 
 echo "---------BUILD_DIR:"
 ls -lha $BUILD_DIR
@@ -19,6 +17,12 @@ echo "--------- CACHE_DIR:"
 ls -lha $CACHE_DIR
 echo "--------- ENV_DIR:"
 ls -lha $ENV_DIR
+echo "---------"
+
+DOCKER_IMAGE_URL_PREFIX=$(cat $ENV_DIR/DOCKER_IMAGE_URL_PREFIX)
+docker_image=$DOCKER_IMAGE_URL_PREFIX:$SOURCE_VERSION
+
+
 echo "--------- DOCKER_IMAGE_URL_PREFIX:"
 echo $DOCKER_IMAGE_URL_PREFIX
 echo "--------- docker_image:"
