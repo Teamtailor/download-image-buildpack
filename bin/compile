@@ -23,8 +23,8 @@ docker_image_url_prefix=$(cat $ENV_DIR/DOCKER_REGISTRY)
 docker_image=$docker_image_url_prefix:$SOURCE_VERSION
 
 
-echo "--------- DOCKER_IMAGE_URL_PREFIX:"
-echo $DOCKER_IMAGE_URL_PREFIX
+echo "--------- docker_image_url_prefix:"
+echo $docker_image_url_prefix
 echo "--------- docker_image:"
 echo $docker_image
 echo "--------- SOURCE_VERSION:"
