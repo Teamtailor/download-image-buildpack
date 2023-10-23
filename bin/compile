@@ -18,8 +18,9 @@ ls -lha $CACHE_DIR
 echo "--------- ENV_DIR:"
 ls -lha $ENV_DIR
 echo "---------"
+aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 522427722506.dkr.ecr.eu-central-1.amazonaws.com
 
-docker_image_url_prefix=$(cat $ENV_DIR/DOCKER_REGISTRY)
+docker_image_url_prefix=$(cat $ENV_DIR/DOCKER_IMAGE_URL_PREFIX)
 docker_image=$docker_image_url_prefix$SOURCE_VERSION
 
 
